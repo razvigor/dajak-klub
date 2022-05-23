@@ -1,0 +1,63 @@
+@use '../sass/variables';
+@use '../sass/mixins';
+
+nav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    height: 80px;
+    background-color: variables.$color-white;
+    .container {
+        @include mixins.flex(row, space-between, center);
+        height: 100%;
+        .mobile-btn {
+            display: block;
+            @media screen and (min-width: variables.$desktop-sm) {
+                display: none;
+            }
+            .mob-btn {
+                width: 42px;
+                height: 42px;
+                position: relative;
+                border: none;
+                padding: 4px;
+                background-color: variables.$color-transparent;
+                span {
+                    width: 80%;
+                    height: 3px;
+                    background-color: variables.$color-dark-blue;
+                    position: absolute;
+                    left: 10%;
+                    &:first-child {
+                        top: 17%;
+                    }
+                    &:nth-child(2) {
+                        top: 50%;
+                        transform: translateY(-50%);
+                    }
+                    &:last-child {
+                        bottom: 17%;
+                    }
+                }
+                &.active {
+                    span {
+                        &:first-child {
+                            top: 50%;
+                            transform: translateY(-50%) rotate(45deg);
+                        }
+                        &:nth-child(2) {
+                            display: none;
+                        }
+                        &:last-child {
+                            bottom: 50%;
+                            transform: translateY(50%) rotate(-45deg);
+                        }
+                    }
+                }
+            }
+        }
+    }
+   
+    
+}
