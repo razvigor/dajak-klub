@@ -8,6 +8,7 @@ nav {
     right: 0;
     height: 80px;
     background-color: variables.$color-white;
+    z-index: 1050;
     .container {
         @include mixins.flex(row, space-between, center);
         height: 100%;

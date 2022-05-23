@@ -1,5 +1,5 @@
 import React from 'react'
-import Typed from 'react-typed';
+import ReactTypingEffect from 'react-typing-effect';
 import { FaViber } from "react-icons/fa";
 import { FaRegEnvelope } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa";
@@ -27,19 +27,15 @@ const Header = () => {
                 <p>Banja Luka</p>
             </div>
             <div className='typed-text'>
-                <p>U PONUDI:
-                    <Typed
-                        strings={[
-                            'Search for products',
-                            'Search for categories',
-                            'Search for brands']}
-                            typeSpeed={40}
-                            backSpeed={50}
-                            attr="placeholder"
-                            loop >
-                            <input type="text"/>
-                        </Typed>
-                </p>
+                <h2>U PONUDI:{' '}
+                    <ReactTypingEffect
+                        text={["Iznajmljivanje čamaca", "Turističke ture", "Škola dajakastva", "Upis novih članova"]}
+                        speed={200}
+                        eraseSpeed={100}
+                        eraseDelay={100}
+                        typingDelay={1000}
+                    />
+                </h2>
             </div>
         </div>
     </div>
