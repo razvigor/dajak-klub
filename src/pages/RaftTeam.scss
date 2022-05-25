@@ -1,0 +1,14 @@
+@use '../sass/mixins';
+@use '../sass/variables';
+.raft-team {
+    padding: 45px 0;
+    .container {
+        @include mixins.flex(column, flex-start, stretch);
+        @media screen and (min-width: variables.$mobile-lg) {
+            @include mixins.flex(row, space-between, stretch);
+            flex-wrap: wrap;
+            column-gap: 20px;
+            row-gap: 20px;
+        }
+    }
+}
