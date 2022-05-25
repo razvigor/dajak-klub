@@ -30,10 +30,10 @@ const Header = () => {
                 <h2>U PONUDI:{' '}
                     <ReactTypingEffect
                         text={["Iznajmljivanje čamaca", "Turističke ture", "Škola dajakastva", "Upis novih članova"]}
-                        speed={200}
+                        speed={100}
                         eraseSpeed={100}
                         eraseDelay={100}
-                        typingDelay={1000}
+                        typingDelay={800}
                     />
                 </h2>
             </div>

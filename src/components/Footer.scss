@@ -1,0 +1,71 @@
+@use '../sass/variables';
+@use '../sass/mixins';
+
+footer {
+    background-color: variables.$color-dark-blue;
+    color: variables.$color-white;
+    padding: 35px 0 0;
+    .footer-top {
+        @include mixins.flex(column, flex-start, flex-start);
+        row-gap: 20px;
+        border-bottom: 1px solid variables.$color-white;
+            padding-bottom: 20px;
+        @media screen and (min-width: variables.$desktop-sm) {
+            flex-direction: row;
+            text-align: center;
+            row-gap: 0;
+            column-gap: 15px;
+        }
+        .footer-top-item {
+            width: 100%;
+            @media screen and (min-width: variables.$desktop-sm)  {
+                width: calc(33.33% - 10px);
+            }
+            &:first-child {
+                h2 {
+                    @include mixins.flex(column, flex-start, flex-start);
+                    row-gap: 15px;
+                    @media screen and (min-width: variables.$desktop-sm) {
+                        align-items: center;
+                    }
+                }
+                .social {
+                    @include mixins.flex(row, flex-start, center);
+                    column-gap: 10px;
+                    @media screen and (min-width: variables.$desktop-sm) {
+                        justify-content: center;
+                    }
+                    a {
+                        font-size: 25px;
+                        color: variables.$color-white;
+                        transition: color 0.3s;
+                        &:hover {
+                            color: variables.$color-golden-yellow;
+                        }
+                    }
+                }
+            }
+            ul {
+                @include mixins.flex(column, flex-start, flex-start);
+                row-gap: 8px;
+                @media screen and (min-width: variables.$desktop-sm) {
+                    align-items: center;
+                }
+                a {
+                    color: variables.$color-white;
+                    transition: color .3s;
+                    &:hover {
+                        color: variables.$color-golden-yellow;
+                    }
+                }
+            }
+        }
+    }
+    .footer-bottom {
+        @include mixins.flex(row, center, center);
+        padding: 10px 0;
+        p {
+            margin: 0;
+        }
+    }
+}

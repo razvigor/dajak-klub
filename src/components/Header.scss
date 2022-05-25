@@ -2,10 +2,10 @@
 @use '../sass/mixins';
 .header {
     background-color: variables.$color-light-blue;
-    height: 62px;
+    
     .container {
         @include mixins.flex(row, space-between, center);
-        height: 100%;
+        height: 62px;
         .info {
             @include mixins.flex(column, center, flex-start);
             row-gap: 8px;
@@ -54,12 +54,24 @@
         height: 250px;
         position: relative;
         color: variables.$color-white;
+        background-size: cover;
+        background-position: center;
         @media screen and (min-width: variables.$tablet-sm) {
             height: 450px;
         }
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: variables.$color-dark-blue;
+            opacity: 0.2;
+        }
         .dajak {
             position: absolute;
-            background-color: rgba(130, 130, 130, 0.4);
+            background-color: rgba(130, 130, 130, 0.6);
             padding: 7px;
             text-align: center;
             border-bottom: 1px solid #0b5071;

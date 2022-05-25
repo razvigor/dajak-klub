@@ -56,7 +56,7 @@ const MainMenu = (props) => {
             ev.target.classList.add('active')
           }
           
-        }}>DAJAK ČAMAC <FaAngleDown /></button>
+        }}>U PONUDI <FaAngleDown /></button>
           <ul id='school' className='dropdown'>
             <li><NavLink to='/skola-dajakastva' onClick={resetDropdown}>Škola dajakaštva</NavLink></li>
             <li><NavLink to='/turisticke-ture' onClick={resetDropdown}>Turističke ture</NavLink></li>
