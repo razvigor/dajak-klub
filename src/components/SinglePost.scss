@@ -1,0 +1,27 @@
+@use '../sass/mixins';
+@use '../sass/variables';
+
+.single-post {
+    padding: 40px 0 ;
+    width: 100%;
+    @media screen and (min-width: variables.$desktop-sm) {
+        width: 60%;
+        margin: 0 auto;
+    }
+    h2 {
+        font-size: 20px;
+        @media screen and (min-width: variables.$desktop-sm) {
+            font-size: 35px;
+        }
+    }
+    h6 {
+        font-size: 14px;
+        color: lighten(variables.$color-dark-blue, 30);
+        @media screen and (min-width: variables.$desktop-sm) {
+            font-size: 16px;
+        }
+    }
+    p {
+        line-height: 1.5;
+    }
+}

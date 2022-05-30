@@ -4,6 +4,7 @@ import ExcerptPost from '../components/ExcerptPost';
 import './RaftTeam.scss';
 import ArrLeft from '../img/strelica-l.png';
 import ArrRight from '../img/strelica-d.png';
+import Header from '../components/Header';
 const RaftTeam = () => {
 	const [loading, setLoading] = useState(true);
 	const [posts, setPosts] = useState(null);
@@ -59,14 +60,18 @@ const RaftTeam = () => {
 									'sizes'
 								]['full']['source_url']
 							}
+							date={item.content.rendered}
 							title={item.title.rendered}
-							urlToPost={`/blog/${item.id}`}
+							urlToPost={`${item.id}`}
 						/>
 					);
 			  })
 			: null;
 	return (
+		<>
+		<Header />
 		<div className='raft-team'>
+			
 			<div className='container'>
 				<h1>Raft Tim</h1>
 			</div>
@@ -92,6 +97,7 @@ const RaftTeam = () => {
 				</div>
 			) : null}
 		</div>
+		</>
 	);
 };
 
