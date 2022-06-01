@@ -13,6 +13,7 @@ import RiverVrbas from './pages/RiverVrbas';
 import TuristTours from './pages/TuristTours';
 import BlogSingle from './pages/BlogSingle';
 import SchoolOfDajak from './pages/SchoolOfDajak';
+import Singlegallery from './pages/Singlegallery';
 
 
 
@@ -28,7 +29,10 @@ function App() {
           <Route path='iznajmlivanje-camaca' element={<BoatRental />} />
           <Route path='kontakt' element={<Contact />} />
           <Route path='dajak-camac' element={<DajakBoath />} />
-          <Route path='galerija' element={<Gallery />} />
+          <Route path='galerija' >
+            <Route index element={<Gallery />} />
+            <Route path=':galleryId' element={<Singlegallery />} />
+          </Route>
           <Route path='raft-tim'>
             <Route index element={<RaftTeam />} />
             <Route path=':id' element={<BlogSingle />} />
