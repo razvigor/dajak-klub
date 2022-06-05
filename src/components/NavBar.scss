@@ -6,12 +6,85 @@ nav {
     left: 0;
     top: 0;
     right: 0;
-    height: 80px;
+    height: 125px;
     background-color: variables.$color-white;
     z-index: 1050;
+    @media screen and (max-width: variables.$tablet-sm) {
+            height: 80px;
+    }
     .container {
         @include mixins.flex(row, space-between, center);
         height: 100%;
+        .logo{
+            padding-left: 15px;
+            @media screen and (max-width: variables.$tablet-sm) {
+                padding-left: 5px;
+                width: 30%;
+            }
+
+            img{
+            @media screen and (max-width: variables.$tablet-sm) {
+            width: 80px;
+            height: 80px;
+            }
+            }
+        }
+        .contact-us{
+            display: flex;
+            justify-content: space-between;
+            line-height: 3.15;
+            background-color: variables.$color-light-blue;
+            border-radius: 20px;
+            @media screen and (max-width:variables.$tablet-sm) {
+                display: none;
+            }
+            .info {
+                @include mixins.flex(column, center, flex-start);
+                row-gap: 8px;
+                padding-left: 15px;
+                @media screen and (min-width: variables.$mobile-lg) {
+                    flex-direction: row;
+                }
+                @media screen and (min-width: variables.$mobile-lg) {
+                    row-gap: 0;
+                    column-gap: 15px;
+                }
+                a {
+                    @include mixins.flex(row, flex-start, center);
+                    column-gap: 8px;
+                    color: variables.$color-dark-blue;
+                    transition: color 0.3s;
+                    
+                    &:hover {
+                        color: variables.$color-golden-yellow;
+                    }
+                }
+            }
+            .social {
+                @include mixins.flex(row, flex-start, center);
+                column-gap: 8px;
+                padding-right: 15px;
+                a {
+                    @include mixins.flex(row, center, center);
+                    width: 42px;
+                    height: 42px;
+                    border-radius: 50%;
+                    border: 1px solid variables.$color-dark-blue;
+                    transition: background-color 0.6;
+                    color: variables.$color-dark-blue;
+                    svg {
+                        transition: transform 0.6s;
+                    }
+                    &:hover {
+                        background-color: variables.$color-golden-yellow;
+                        svg {
+                            transform: rotateY(360deg);
+                        }
+                    }
+                }
+            }
+        }
+        
         .mobile-btn {
             display: block;
             @media screen and (min-width: variables.$desktop-sm) {
@@ -58,7 +131,18 @@ nav {
                 }
             }
         }
+        .nav-right{
+            display: flex;
+            flex-direction: column;
+            height: 110px;
+            width: 89%;
+            @media screen and (max-width:variables.$desktop-sm) {
+                height: auto;
+                width: 70%;
+            }
+        }
     }
+    
    
     
 }
