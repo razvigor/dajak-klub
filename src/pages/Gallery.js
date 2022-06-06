@@ -8,10 +8,10 @@ const Gallery = () => {
 	useEffect(() => {
 		axios
 			.get(
-				`https://mbportfolio.info/api/wp-json/wp/v2/posts?categories=3&_embed&per_page=10&page=1`
+				`https://mbportfolio.info/api/wp-json/wc/v3/products?consumer_key=ck_98bea202d0803592c21e92993b57e00cb57c405a&consumer_secret=cs_3c76fe2d3bd561770419b4a692b555fe44696c4f`
 			)
 			.then((res) => {
-				// console.log(res.data)
+				console.log(res.data);
 				setGalleryCategories(res.data);
 			})
 			.catch((err) => {
@@ -22,28 +22,20 @@ const Gallery = () => {
 	const content =
 		galleryCategories !== null
 			? galleryCategories.map((item) => {
-					if (item['_embedded']['wp:featuredmedia'] !== undefined) {
-						console.log(item['_embedded']['wp:featuredmedia'][0]['source_url']);
-						return (
-							<div className='gallery-item' key={item.id}>
-								<h3>{item.title.rendered}</h3>
-								<div className='image-container'>
-									<a href={`galerija/${item.id}`}>
-										<img
-											src={
-												item['_embedded']['wp:featuredmedia'][0]['source_url']
-											}
-											alt={item.title.rendered}
-										/>
-									</a>
-								</div>
+					return (
+						<div className='gallery-item' key={item.id}>
+							<h3>{item.name}</h3>
+							<div className='image-container'>
+								<a href={`galerija/${item.id}`}>
+									<img src={item.images[0].src} alt={item.name} />
+								</a>
 							</div>
-						);
-					}
+						</div>
+					);
 			  })
 			: null;
 
-	return <div>{content}</div>;
+	return <div>{content !== null ? content : <p>Loader...</p>}</div>;
 };
 
 export default Gallery;
