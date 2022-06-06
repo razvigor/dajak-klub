@@ -1,5 +1,5 @@
-import React, {useState, useEffect, useRef} from 'react'
-import Header from '../components/Header'
+import React, { useState, useEffect, useRef } from 'react';
+import Header from '../components/Header';
 import axios from 'axios';
 import ExcerptPost from '../components/ExcerptPost';
 import './RaftTeam.scss';
@@ -7,7 +7,7 @@ import ArrLeft from '../img/strelica-l.png';
 import ArrRight from '../img/strelica-d.png';
 
 const Home = () => {
-  const [loading, setLoading] = useState(true);
+	const [loading, setLoading] = useState(true);
 	const [posts, setPosts] = useState(null);
 	const [currentPage, setCurrentPage] = useState(1);
 	const [totalPages, setTotalPages] = useState(1);
@@ -23,7 +23,7 @@ const Home = () => {
 		if (ref) {
 			axios
 				.get(
-					`http://mbportfolio.info/api/wp-json/wp/v2/posts?categories=${category}&_embed&per_page=6&page=${cpage}`
+					`https://mbportfolio.info/api/wp-json/wp/v2/posts?categories=${category}&_embed&per_page=6&page=${cpage}`
 				)
 				.then((res) => {
 					console.log(res);
@@ -68,10 +68,10 @@ const Home = () => {
 					);
 			  })
 			: null;
-  return (
-    <div className='home'>
-      <Header />
-      <div className='container'>{!loading ? content : <p>Loading...</p>}</div>
+	return (
+		<div className='home'>
+			<Header />
+			<div className='container'>{!loading ? content : <p>Loading...</p>}</div>
 			{totalPages > 1 ? (
 				<div className='pagination'>
 					<div className='pagination-container'>
@@ -92,8 +92,8 @@ const Home = () => {
 					</div>
 				</div>
 			) : null}
-    </div>
-  )
-}
+		</div>
+	);
+};
 
-export default Home
+export default Home;

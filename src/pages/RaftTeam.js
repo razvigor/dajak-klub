@@ -22,7 +22,7 @@ const RaftTeam = () => {
 		if (ref) {
 			axios
 				.get(
-					`http://mbportfolio.info/api/wp-json/wp/v2/posts?categories=${category}&_embed&per_page=6&page=${cpage}`
+					`https://mbportfolio.info/api/wp-json/wp/v2/posts?categories=${category}&_embed&per_page=6&page=${cpage}`
 				)
 				.then((res) => {
 					console.log(res);
@@ -69,34 +69,35 @@ const RaftTeam = () => {
 			: null;
 	return (
 		<>
-		<Header />
-		<div className='raft-team'>
-			
-			<div className='container'>
-				<h1>Raft Tim</h1>
-			</div>
-			<div className='container'>{!loading ? content : <p>Loading...</p>}</div>
-			{totalPages > 1 ? (
-				<div className='pagination'>
-					<div className='pagination-container'>
-						<button
-							disabled={currentPage <= 1 ? true : false}
-							onClick={pageDecrement}
-						>
-							<img src={ArrLeft} alt='Arow left icon' height='19' /> Prethodna
-							stranica
-						</button>
-						<button
-							disabled={currentPage >= totalPages ? true : false}
-							onClick={pageIncrement}
-						>
-							Naredna stranica{' '}
-							<img src={ArrRight} alt='Arow right icon' height='19' />
-						</button>
-					</div>
+			<Header />
+			<div className='raft-team'>
+				<div className='container'>
+					<h1>Raft Tim</h1>
 				</div>
-			) : null}
-		</div>
+				<div className='container'>
+					{!loading ? content : <p>Loading...</p>}
+				</div>
+				{totalPages > 1 ? (
+					<div className='pagination'>
+						<div className='pagination-container'>
+							<button
+								disabled={currentPage <= 1 ? true : false}
+								onClick={pageDecrement}
+							>
+								<img src={ArrLeft} alt='Arow left icon' height='19' /> Prethodna
+								stranica
+							</button>
+							<button
+								disabled={currentPage >= totalPages ? true : false}
+								onClick={pageIncrement}
+							>
+								Naredna stranica{' '}
+								<img src={ArrRight} alt='Arow right icon' height='19' />
+							</button>
+						</div>
+					</div>
+				) : null}
+			</div>
 		</>
 	);
 };
