@@ -1,0 +1,1 @@
+{"version":3,"sources":["Singlegallery.scss","Singlegallery.css","../sass/_mixins.scss"],"names":[],"mappings":"AAEA;EACI,eAAA;ACDJ;ADEI;EEHA,aAAA;EACA,sBFGyB;EEFzB,8BFEiC;EEDjC,mBFCgD;ACGpD;ADFQ;EAFJ;IAGQ,mBAAA;IACA,eAAA;IACA,aAAA;ECKV;AACF;ADJQ;EACI,cAAA;EACA,WAAA;ACMZ;ADLY;EAHJ;IAIQ,UAAA;ECQd;AACF;ADPY;EANJ;IAOQ,aAAA;ECUd;AACF","file":"Singlegallery.css"}

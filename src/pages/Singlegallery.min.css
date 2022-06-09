@@ -1,0 +1,2 @@
+.gallery-item{padding:85px 0}.gallery-item .images{display:flex;flex-direction:column;justify-content:space-between;align-items:center}@media screen and (min-width: 840px){.gallery-item .images{flex-direction:row;flex-wrap:wrap;row-gap:20px}}.gallery-item .images a{display:block;width:100%}@media screen and (min-width: 840px){.gallery-item .images a{width:49%}}@media screen and (min-width: 1200px){.gallery-item .images a{width:32.33%}}
+/*# sourceMappingURL=Singlegallery.min.css.map */
