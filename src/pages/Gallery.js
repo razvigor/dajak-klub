@@ -35,7 +35,11 @@ const Gallery = () => {
 			  })
 			: null;
 
-	return <div>{content !== null ? content : <p>Loader...</p>}</div>;
+	return (
+		<div className='gallery'>
+			{content !== null ? content : <p>Loader...</p>}
+		</div>
+	);
 };
 
 export default Gallery;

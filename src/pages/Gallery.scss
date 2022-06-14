@@ -1,12 +1,14 @@
 @use '../sass/mixins';
 @use '../sass/variables';
-.gallery-item {
-    padding: 0 15px;
-    .gallery-image-container {
-        width: 100%;
-        @media screen and (min-width: variables.$tablet-lg) {
-            display: flex;
-        }
-        
-    }
+.gallery {
+	padding: 80px 0;
+	.gallery-item {
+		padding: 0 15px;
+		.gallery-image-container {
+			width: 100%;
+			@media screen and (min-width: variables.$tablet-lg) {
+				display: flex;
+			}
+		}
+	}
 }

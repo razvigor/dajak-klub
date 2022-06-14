@@ -12,7 +12,6 @@ const BlogSingle = () => {
 		axios
 			.get(`https://mbportfolio.info/api/wp-json/wp/v2/posts/${id}`)
 			.then((res) => {
-				console.log(res.data);
 				setpostData(res.data);
 				setLoading(false);
 			})

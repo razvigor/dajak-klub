@@ -1,23 +1,18 @@
 @use '../sass/mixins';
 @use '../sass/variables';
-.gallery-item {
-    padding: 85px 0;
-    .images {
-        @include mixins.flex(column, space-between, center);
-        @media screen and (min-width: variables.$tableet-md) {
-            flex-direction: row;
-            flex-wrap: wrap;
-            row-gap: 20px;
-        }
-        a {
-            display: block;
-            width: 100%;
-            @media screen and (min-width: variables.$tableet-md) {
-                width: 49%;
-            }
-            @media screen and (min-width: variables.$desktop-md) {
-                width: 32.33%;
-            }
-        }
-    }
+.single-gallery {
+	.images {
+		@include mixins.flex(column, space-between, center);
+		@media screen and (min-width: variables.$tableet-md) {
+			display: grid;
+			grid-template-columns: repeat(3, 32%);
+			grid-auto-rows: 10px;
+			grid-auto-flow: dense;
+		}
+		a {
+			display: block;
+			width: 100%;
+			overflow: hidden;
+		}
+	}
 }
