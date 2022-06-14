@@ -6,11 +6,13 @@
 		padding-top: 65px;
 		min-height: 60vh;
 		@include mixins.flex(column, space-between, center);
+		row-gap: 10px;
 		@media screen and (min-width: variables.$tableet-md) {
 			display: grid;
 			grid-template-columns: repeat(3, 32.3%);
 			grid-auto-rows: 10px;
 			grid-auto-flow: dense;
+			row-gap: 0;
 		}
 		a {
 			display: block;
