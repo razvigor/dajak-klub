@@ -8,7 +8,7 @@ const RiverVrbas = () => {
       <img src={pic} />
         <div class="text-holder">
 
-           <h2>DAJAK ČAMAC</h2>
+           <h2>RIJEKA VRBAS</h2>
 
             <p>Vrbas je rijeka i pritoka Save u zapadnom dijelu Bosne i Hercegovine, dugačka oko 250 km, sa površinom sliva oko 5900 km². Nastaje od dva vrela na Zec-Planini (ogranak Vranice). Rijeka Vrbas usjeca kompozitnu dolinu, prolazeći kroz Skopljansku kotlinu, Vinacku klisuru, Jajačku kotlinu, kanjonsku dolinu Tjesno, Banjolučku kotlinu, a donjim tokom preko svoje makroplavine Lijevče polje. Pritoke Vrbasa su: Vrbanja, Pliva, Ugar i druge. Na rijeci je izgrađeno nekoliko značajnijih hidrocentrala. Na obalama Vrbasa ili u njegovoj blizini nalaze se Gornji Vakuf, Bugojno, Donji Vakuf, Jajce i Banja Luka.</p>
         </div>
