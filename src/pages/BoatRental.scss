@@ -1,0 +1,47 @@
+@use '../sass/variables';
+
+.boat-rental{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: justify;
+
+    ul{
+        margin: 20px 0 40px;
+    }
+    h2{
+        width: 100%;
+        margin: 5px 0;
+        line-height: 2.5;
+        text-align: center;
+        background-color: #21396f;
+        color: variables.$color-white;
+    }
+
+    li{
+        padding: 5px 150px;
+
+        span{
+            display: block;
+            padding: 5px;
+        }
+    }
+
+    li:last-child{
+        display: flex;
+        flex-direction: column;
+    }
+    h4{
+        background-color: #21396f;
+        color: variables.$color-white;
+        line-height: 2;
+        width: 100%;
+        margin: 40px 0 2px;
+        text-align: center;
+    }
+
+    img{
+        max-width: 100%;
+    }
+}
