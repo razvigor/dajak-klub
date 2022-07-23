@@ -2,6 +2,7 @@
 @use '../sass/mixins';
 
 nav {
+    padding: 0 15px;
     position: fixed;
     left: 0;
     top: 0;
@@ -16,7 +17,7 @@ nav {
         @include mixins.flex(row, space-between, center);
         height: 100%;
         .logo{
-            padding-left: 15px;
+            padding-left: 10px;
             @media screen and (max-width: variables.$tablet-sm) {
                 padding-left: 5px;
                 width: 30%;
