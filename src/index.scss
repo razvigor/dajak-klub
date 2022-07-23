@@ -24,7 +24,6 @@ img {
 	box-sizing: border-box;
 }
 .container {
-	padding: 0 15px;
 	@media screen and (min-width: variables.$desktop-lg) {
 		max-width: variables.$desktop-lg;
 		margin: 0 auto;
