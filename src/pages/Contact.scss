@@ -54,7 +54,7 @@
         border: 1px solid black;
         border-radius: 30px;
 
-        button[type=submit]{
+        button[type=button]{
             width: 110px;
             height: 40px;
             font-size: 16px;
@@ -63,6 +63,11 @@
             border: none;
             border-radius: 8px;
             margin-top: 20px;
+            cursor: pointer;
+        }
+
+        button[type=button]:hover{
+            background-color: variables.$color-golden-yellow;
         }
 
         .forms{
@@ -85,6 +90,7 @@
 
             textarea{
                 border-radius: 5px;
+                border: 2px solid variables.$color-dark-blue;
             }
 
             textarea:focus{
