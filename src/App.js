@@ -14,6 +14,7 @@ import TuristTours from './pages/TuristTours';
 import BlogSingle from './pages/BlogSingle';
 import SchoolOfDajak from './pages/SchoolOfDajak';
 import Singlegallery from './pages/Singlegallery';
+import Novosti from './pages/Novosti'
 
 
 
@@ -26,6 +27,7 @@ function App() {
           <Route index element={<Home />} />
           <Route path=':id' element={<BlogSingle />} />
           <Route path='o-klubu' element={<About />} />
+          <Route path='novosti' element={<Novosti />} />
           <Route path='iznajmlivanje-camaca' element={<BoatRental />} />
           <Route path='kontakt' element={<Contact />} />
           <Route path='dajak-camac' element={<DajakBoath />} />
