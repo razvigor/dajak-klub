@@ -7,10 +7,10 @@ import ArrLeft from '../img/strelica-l.png';
 import ArrRight from '../img/strelica-d.png';
 
 const Home = () => {
-	const [loading, setLoading] = useState(true);
+	 const [loading, setLoading] = useState(true);
 	const [posts, setPosts] = useState(null);
 	const [currentPage, setCurrentPage] = useState(1);
-	const [totalPages, setTotalPages] = useState(1);
+	const [totalPages, setTotalPages] = useState(1); 
 
 	const ref = useRef(true);
 	useEffect(() => {
@@ -52,7 +52,7 @@ const Home = () => {
 	const content =
 		posts !== null
 			? posts.map((item) => {
-					return (
+					/* return (
 						<ExcerptPost
 							key={item.id}
 							excerpt={item.excerpt.rendered}
@@ -65,13 +65,13 @@ const Home = () => {
 							title={item.title.rendered}
 							urlToPost={`/${item.id}`}
 						/>
-					);
+					); */
 			  })
-			: null;
+			: null; 
 	return (
 		<div className='home'>
 			<Header />
-			<div className='container'>{!loading ? content : <p>Loading...</p>}</div>
+			{/* <div className='container'>{!loading ? content : <p>Loading...</p>}</div> */}
 			{totalPages > 1 ? (
 				<div className='pagination'>
 					<div className='pagination-container'>
@@ -93,7 +93,7 @@ const Home = () => {
 				</div>
 			) : null}
 		</div>
-	);
+	); 
 };
 
 export default Home;
