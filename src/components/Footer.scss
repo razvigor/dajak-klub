@@ -2,8 +2,7 @@
 @use '../sass/mixins';
 
 footer {
-    background-color: variables.$color-dark-blue;
-    color: variables.$color-white;
+    color: variables.$color-white;  
     padding: 35px 0 0;
     .footer-top {
         @include mixins.flex(column, flex-start, flex-start);
@@ -17,11 +16,18 @@ footer {
             column-gap: 15px;
         }
         .footer-top-item {
+            padding: 25px 0;
             width: 100%;
+            color: #fff;
+            background-color: variables.$color-dark-blue;
             @media screen and (min-width: variables.$desktop-sm)  {
                 width: calc(33.33% - 10px);
+                border: 1px solid black;
+                height: 240px;
+                border-radius: 20px;
             }
             &:first-child {
+                padding: 0;
                 h2 {
                     @include mixins.flex(column, flex-start, flex-start);
                     row-gap: 15px;
@@ -64,6 +70,8 @@ footer {
     .footer-bottom {
         @include mixins.flex(row, center, center);
         padding: 10px 0;
+        background-color: variables.$color-dark-blue;
+        color: #fff;
         p {
             margin: 0;
         }
