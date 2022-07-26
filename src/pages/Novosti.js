@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import Header from '../components/Header';
+import './Novosti.scss'
 import axios from 'axios';
 import ExcerptPost from '../components/ExcerptPost';
 import './RaftTeam.scss';
@@ -72,6 +72,7 @@ const Novosti = () => {
 			: null; 
 	return (
 		<div className='home'>
+			<h2>NOVOSTI</h2>
 			<div className='container'>{!loading ? content : <p>Loading...</p>}</div>
 			{totalPages > 1 ? (
 				<div className='pagination'>
