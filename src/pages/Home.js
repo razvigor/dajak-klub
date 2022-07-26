@@ -49,7 +49,11 @@ const Home = () => {
 		fetchData(2, currentPage);
 	}, [currentPage, totalPages]);
 
-	const content =
+	return(
+		<Header />
+	)
+
+	/* const content =
 		posts !== null
 			? posts.map((item) => {
 					/* return (
@@ -65,13 +69,13 @@ const Home = () => {
 							title={item.title.rendered}
 							urlToPost={`/${item.id}`}
 						/>
-					); */
+					); 
 			  })
 			: null; 
-	return (
+		return (
 		<div className='home'>
 			<Header />
-			{/* <div className='container'>{!loading ? content : <p>Loading...</p>}</div> */}
+			{<div className='container'>{!loading ? content : <p>Loading...</p>}</div>}
 			{totalPages > 1 ? (
 				<div className='pagination'>
 					<div className='pagination-container'>
@@ -93,7 +97,7 @@ const Home = () => {
 				</div>
 			) : null}
 		</div>
-	); 
+	); */
 };
 
 export default Home;
