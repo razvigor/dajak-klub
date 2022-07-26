@@ -63,7 +63,7 @@ const MainMenu = (props) => {
             <li><NavLink to='/iznajmlivanje-camaca' onClick={resetDropdown}>Iznajmljivanje čamaca</NavLink></li>
           </ul>
         </li>
-        <li><NavLink to='/blog' onClick={resetDropdown}>BLOG</NavLink></li>
+        <li><NavLink to='/novosti' onClick={resetDropdown}>NOVOSTI</NavLink></li>
         <li><NavLink to='/kontakt' onClick={resetDropdown}>KONTAKT</NavLink></li>
 
     </ul>
