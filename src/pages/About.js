@@ -6,7 +6,7 @@ import img from '../img/Osnivaci-DAJAK-kluba.jpg'
 const About = () => {
   return (
     <>
-      <div class="single-post">
+      <div class="post">
         <img src={pic} />
 
             <div class="text-holder">

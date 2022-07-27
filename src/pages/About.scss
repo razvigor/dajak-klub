@@ -1,15 +1,16 @@
 @use '../sass/variables';
 
-.single-post{
-    width: 100%;
-    text-align: center;
-    padding: 10px 60px;
+.post{
+    margin-top: 20px;
+    text-align: justify;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
+
     h2{
         position: absolute;
-        top: -75px;
+        top: -100px;
         left: 42%;
         font-size: 35px;
         color: #fff;
@@ -25,10 +26,7 @@
     }
     img{
         width: 100%;
-        border-radius: 5px;
         position: relative;
-        z-index: -1;
-        display: block;
         &:last-child{
             width: 40%;
             height: 40%;
@@ -36,6 +34,7 @@
     }
     .second-pic{
         margin-top: 50px;
+        border-radius: 5px;
     }
 
     @media screen and (min-width: variables.$tableet-md) {
