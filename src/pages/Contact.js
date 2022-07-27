@@ -59,7 +59,7 @@ const Contact = () => {
               rows="9" cols='45'></textarea>
             </div>
 
-            <button type="submit" value="Submit">Pošalji</button>
+            <button type="button" value="submit">Pošalji</button>
           </div>
     </div>
   )
