@@ -2,10 +2,10 @@
 @use '../sass/variables';
 
 .single-post {
-    padding: 40px 0 ;
+    padding: 20px 0 ;
     width: 100%;
     @media screen and (min-width: variables.$desktop-sm) {
-        width: 60%;
+        width: 97%;
         margin: 0 auto;
     }
     h2 {
