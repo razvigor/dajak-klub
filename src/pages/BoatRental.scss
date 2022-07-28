@@ -21,10 +21,20 @@
 
     li{
         padding: 5px 150px;
+        @media screen and (max-width: variables.$tableet-md) {
+            padding: 0 55px;
+        }
+        @media screen and (max-width: variables.$mobile-lg) {
+            padding: 0 15px;
+        }
 
         span{
             display: block;
             padding: 5px;
+            margin-top: 20px;
+            @media screen and (max-width: variables.$tableet-md){
+                text-align: center;
+            }
         }
     }
 
@@ -43,5 +53,7 @@
 
     img{
         max-width: 100%;
+        padding: 10px;
+        border-radius: 15px;
     }
 }

@@ -22,20 +22,31 @@
         text-align: center;
     }
 
-    img{
-        border-radius: 15px;
-        max-width: 500px;
-        padding: 10px;
+    .image-holder{
+        text-align: center;
+        img{
+            border-radius: 15px;
+            max-width: 40%;
+            padding: 10px;
+
+            @media screen and (max-width: variables.$mobile-lg) {
+                max-width: 100%;
+            }      
+        }
     }
+    
 
     p{
        text-align: start;
+       padding: 10px;
     }
 
 
     h3{
         text-decoration: underline;
         margin-top: 40px;
+        text-align: center;
+        padding: 0 10px;
     }
     
 }

@@ -2,14 +2,13 @@ import React from 'react'
 import './DajakBoath.scss';
 import pic from '../img/camac.jpg'
 import img from '../img/img-04.jpg'
-import imgTwo from '../img/img-15.jpg'
 
 const DajakBoath = () => {
   return (
 
     <div class='post'>
-      <img src={pic} />
-    <div class="text-holder">
+        <img src={pic} />
+        <div class="text-holder">
 
                 <h2>DAJAK ČAMAC</h2>
 
@@ -22,14 +21,14 @@ const DajakBoath = () => {
                 <p>Novija istorija Vrbaskog čamca, recimo zadnjih četrdeset godina, bez ikakve sumnje se veže na ljude kojima i danas treba odati priznanje zbog svog zalaganja za očuvanje ove toliko ugrožene tradicije, na sve one koji su nekoga naučili da vozi čamac, ili su ga sami napravili, barem provozali i ispričali dio ove priče, ali najviše dvojici braće iz stare banjalučke porodice talijanskog porijekla Mariu i Antoniu Zamolo. Smisao za tehniku i veliku sklonost ka radu i stvaranju raznih praktičnih stvari naučili su od oca Guida, vlasnika i vrsnog majstora zlatarskog i sajdžijskog zanata čija je radnja bila smještena još davno prije Drugog rata, u samoj Gospodskoj ulici. Gradsko okruženje i sam život pored rijeke uslovili su da se ova dva brata često susreću sa čamcima, čija ih je izrada i vožnja oduvijek privlačila. U vremenu poslije rata broj čamaca nije bio veliki jer su ih njemački vojnici tokom okupacije oduzeli i zatvorili u Kastel, gdje je veliki broj i propao, a u periodu poslijeratnog opšteg siromaštva malo njih je moglo da se pohvali da posjeduje nov čamac. Situacija se sa godinama popravljala, čak se i održavaju i godišnje trke čamaca a o pobjedniku se pričalo čitavu godinu, do iduće trke. I tako sve do 1964 god. kada iz radionice braće Zamolo izlazi prvi čamac imena LOTOS, a mlađi brat Atonio- Tonči postaje respektivan vozač kog su poštovali mnogo stariji i iskusniji vozači. Niko nije ni slutio da će se slogan Tonči i Lotos i danas u dajakaškim krugovima kao i u čitavoj Banjaluci izgovarati sa velikim poštovanjem.</p>
                 <p>Taj čamac je prvi od današnjih Vrbaskih čamaca sa dajakom koji uz izvjesne prepravke i dorade u kasnijim šezdesetim godinama dobijaju savremen izgled. S obzirom da ne raspolažem tačnim podacima o nekadašnjem Vrbaskom čamcu nisam se ni upuštao u opisivanje, a pošto je pojavom Tončijevog čamca došlo do velike popularizacije ovog plovila u čitavoj Banjaluci zbog posebne elegancije i izgleda na vodi, kao i plovnih karkteristika- taj tip čamca svakako vrijedi opisati i upoznati se sa njim.</p>
                 <p>Vrbaski čamac je prvo dobio stalnu dužinu od sedam metara kao najpraktičniju spram svoje konstrukcije od 3 metalna rebra unutar trupa. Debljina daske je 1,5 cm, najveća širina čamca je 75cm, dubina 30cm, gaz praznog plovila 12cm; krase ga visoka kvaliteta izrade, impregnacije i završne obrade. Najupečatljiviji detalji su krma i špic koji se izrađuju od jednog komada drveta- bagrema, jasena, hrasta, rjeđe trešnje, pa čak i mahagonija. To su materijali koji se različito ponašaju pri obradi, ali treba da ih krasi čistoća i pravilnost godova i koji po završetku obrade daju poseban izgled čamcu zbog svoje prirodne boje i oblika. Špic je tetovaža na čamcu koju on nosi od postanka do nestanka, upečatljiviji je od imena čamca, ali što je još upečatljivije- zaista izgleda poput neke mitske životinje, orla ili zmaja, odaje pitomost ili agresivnost, umjetničku viziju majstora koja je svaki put različita, tako da svaki čamac krasi drugačiji špic. Baš zbog špica vrbaski čamac nije samo puki predmet, on je pravo umjetničko dijelo. I sama izrada čamca je umjetnost preciznosti. Tonči je napravio malu revoluciju u izradi trupa, jer izbacuje katran iz upotrebe i time značajno smanjuje težinu, tako da ni najteži čamac ne prelazi 120kg., uvodi bezbojni lak i unutrašnje spajanje dasaka čime dobija na čvrstoći. Poneki detalj treba da ostane tajna- sklapanje, obrada, upotreba alata, postojanost materijala koji se koriste u izradi i njihovo međusobno ponašanje su i za autora ovog članka donekle nepoznanica čiji naziv glasi- koza nostra- dakle, tajne zanata porodice Zamolo.</p>
-            </div>
+        </div>
 
-            <div class="image-holder">
-              <img src={img} />
-              <img src={imgTwo} />
-            </div>
+        <div className='image-holder'>
+          <img src={img} />
+        </div>
+           
             
-            </div>
+    </div>
   )
 }
 

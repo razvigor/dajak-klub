@@ -2,9 +2,9 @@
 
 .dajak-school{
     width: 100%;
+    align-items: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
 
     h2{
         width: 100%;
@@ -18,6 +18,13 @@
     p{
         text-align: justify;
         padding: 0 150px;
+        @media screen and (max-width: variables.$tableet-md) {
+            padding: 0 55px;
+        }
+        @media screen and (max-width: variables.$mobile-lg) {
+            padding: 0 15px;
+        }
+        
     }
 
     h4{
@@ -33,5 +40,9 @@
         border-radius: 15px;
         max-width: 100%;
         margin-bottom: 30px;
+        padding: 10px;
+        @media screen and (max-width: variables.$mobile-lg){
+            margin-bottom: 0;
+        }
     }
 }
