@@ -4,9 +4,14 @@
 body {
 	margin: 0;
 	font-family: 'Roboto', sans-serif;
-	padding-top: 125px;
+	padding-top: 100px;
 	color: variables.$color-dark-blue;
+
+	@media screen and (min-width: variables.$tablet-sm) {
+		padding-top: 125px;
+		}
 }
+
 ul {
 	list-style: none;
 	margin: 0;
