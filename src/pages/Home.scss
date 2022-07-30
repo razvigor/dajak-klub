@@ -1,0 +1,58 @@
+@use '../sass/variables';
+.homepage{
+    width: 100%;
+
+
+    h3{
+        text-align: center;
+        width: 100%;
+        padding: 0 0 15px;
+        border-bottom: 3px solid #21396f;
+    }
+
+
+        ul{
+            display: flex;
+            flex-direction: column;
+            padding: 0 10px;
+
+            li{
+                font-size: 22px;
+                padding: 15px;
+                margin: 40px 0;
+                border-radius: 10px;
+                text-align: justify; 
+                @media screen and (max-width: 768px) {
+                    font-size: 18px;
+                    margin: 30px 0;
+                }  
+            }
+
+            li:first-child{
+                align-self: flex-start;
+                width: 60%;
+                background-color: variables.$color-light-blue;
+                @media screen and (max-width: 768px) {
+                    width: 100%;
+                }
+            }
+            li:nth-child(2){
+                align-self: flex-end;
+                width: 60%;
+                background-color: variables.$color-light-blue;
+                @media screen and (max-width: 768px) {
+                    width: 100%;
+                }
+            }
+            li:last-child{
+                align-self: flex-start;
+                width: 60%;
+                background-color: variables.$color-light-blue;
+                @media screen and (max-width: 768px) {
+                    width: 100%;
+                }
+            }
+
+               
+        }
+}

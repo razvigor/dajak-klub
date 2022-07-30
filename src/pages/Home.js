@@ -1,10 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Header from '../components/Header';
 import axios from 'axios';
-import ExcerptPost from '../components/ExcerptPost';
-import './RaftTeam.scss';
-import ArrLeft from '../img/strelica-l.png';
-import ArrRight from '../img/strelica-d.png';
+import './Home.scss';
 
 const Home = () => {
 	 const [loading, setLoading] = useState(true);
@@ -50,54 +47,28 @@ const Home = () => {
 	}, [currentPage, totalPages]);
 
 	return(
-		<Header />
-	)
-
-	/* const content =
-		posts !== null
-			? posts.map((item) => {
-					/* return (
-						<ExcerptPost
-							key={item.id}
-							excerpt={item.excerpt.rendered}
-							imgSrc={
-								item['_embedded']['wp:featuredmedia'][0]['media_details'][
-									'sizes'
-								]['full']['source_url']
-							}
-							date={item.content.rendered}
-							title={item.title.rendered}
-							urlToPost={`/${item.id}`}
-						/>
-					); 
-			  })
-			: null; 
-		return (
-		<div className='home'>
+		<div className='homepage'>
 			<Header />
-			{<div className='container'>{!loading ? content : <p>Loading...</p>}</div>}
-			{totalPages > 1 ? (
-				<div className='pagination'>
-					<div className='pagination-container'>
-						<button
-							disabled={currentPage <= 1 ? true : false}
-							onClick={pageDecrement}
-						>
-							<img src={ArrLeft} alt='Arow left icon' height='19' /> Prethodna
-							stranica
-						</button>
-						<button
-							disabled={currentPage >= totalPages ? true : false}
-							onClick={pageIncrement}
-						>
-							Naredna stranica{' '}
-							<img src={ArrRight} alt='Arow right icon' height='19' />
-						</button>
-					</div>
-				</div>
-			) : null}
-		</div>
-	); */
+			
+			<h3>ZANIMLJIVOSTI</h3>
+
+				<ul>
+					<li> Osnivanje Dajak kluba imalo je u cilju očuvanje dajak čamca kao autohtone banjalučke 	vještine, zaštitu vodotoka, obala i porječja rijeka, kao i postavljanje zvaničnih standarda vožnje dajak čamca sa ciljem registrovanja ove vještine kao sporta.
+					</li>
+
+					<li>
+						<b><u>Dajak čamac kao simbol grada</u></b> - pretpostavka je da je nastao kada i Banjaluka, prvo zato što nije bilo mostova pa je čamac bio jedino rješenje za prelazak sa obale na obalu, a kasnije kada su sagrađeni prvi mostovi, bio je jedini način prelaska preko rijeke a da se ne plati mostarina. Korišten je u trgovačke svrhe, za prevoz robe od obale do obale.
+					</li>
+
+					<li>
+						Dajak je naziv obrađenog komada drveta kojim se gura čamac. Upravo taj komad drveta, po
+						kojem se naziva čamac, služi za odgurivanje, daje čamcu potrebno ubrzanje za rijeku, a
+						koristi se zbog relativno male dubine gdje veslo ne bi bilo od pomoći.
+					</li>
+				</ul>
+			</div>
+	)
+	
 };
 
 export default Home;
