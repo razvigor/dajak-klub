@@ -2,6 +2,7 @@
 @use '../sass/mixins';
 .header {
     background-color: variables.$color-light-blue;
+    margin-top: 20px;
     
     .banner {
         height: 250px;
