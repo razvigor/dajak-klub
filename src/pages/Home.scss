@@ -1,58 +1,55 @@
 @use '../sass/variables';
+
+
 .homepage{
     width: 100%;
-
 
     h3{
         text-align: center;
         width: 100%;
-        padding: 0 0 15px;
-        border-bottom: 3px solid #21396f;
+        margin-top: 100px;
+        padding: 15px 0;
+        font-size: 22px;
+        border-top: 1px solid variables.$color-dark-blue;
+        border-bottom: 1px solid variables.$color-dark-blue;
+    }
+
+    img{
+        margin-top: 100px;
+        max-width: 100%;
     }
 
 
-        ul{
-            display: flex;
-            flex-direction: column;
-            padding: 0 10px;
+    ul{
+        display: flex;
+        justify-content: space-evenly;
+        padding: 0 10px;
+        margin-top: 60px;
+        @media screen and (max-width: 770px) {
+            flex-direction: column;  
+            align-items: center;
+        } 
 
-            li{
-                font-size: 22px;
-                padding: 15px;
-                margin: 40px 0;
-                border-radius: 10px;
-                text-align: justify; 
-                @media screen and (max-width: 768px) {
-                    font-size: 18px;
-                    margin: 30px 0;
-                }  
-            }
+      
 
-            li:first-child{
-                align-self: flex-start;
-                width: 60%;
-                background-color: variables.$color-light-blue;
-                @media screen and (max-width: 768px) {
-                    width: 100%;
-                }
-            }
-            li:nth-child(2){
-                align-self: flex-end;
-                width: 60%;
-                background-color: variables.$color-light-blue;
-                @media screen and (max-width: 768px) {
-                    width: 100%;
-                }
-            }
-            li:last-child{
-                align-self: flex-start;
-                width: 60%;
-                background-color: variables.$color-light-blue;
-                @media screen and (max-width: 768px) {
-                    width: 100%;
-                }
-            }
-
-               
-        }
+        li{
+            width: calc(30% - 10px);
+            border-radius: 10px;
+            font-size: 20px;
+            padding: 30px 20px 20px;
+            text-align: justify;
+            background-color: #ececec;
+            @media screen and (max-width: variables.$tableet-md) {
+                font-size: 18px;
+                margin: 30px 0;
+                padding: 20px 10px 20px;
+            }  
+            @media screen and (max-width: 770px) {
+                font-size: 16px;
+                margin: 30px 0;
+                padding: 20px 10px 20px;
+                width: 100%;   
+            }  
+        }         
+    }
 }

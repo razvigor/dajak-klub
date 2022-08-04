@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import Header from '../components/Header';
 import axios from 'axios';
 import './Home.scss';
+import pic from '../img/dajak-home.jpg'
 
 const Home = () => {
 	 const [loading, setLoading] = useState(true);
@@ -50,14 +51,14 @@ const Home = () => {
 		<div className='homepage'>
 			<Header />
 			
-			<h3>ZANIMLJIVOSTI</h3>
+			<h3>ZANIMLJIVOSTI O DAJAK ČAMCU</h3>
 
 				<ul>
 					<li> Osnivanje Dajak kluba imalo je u cilju očuvanje dajak čamca kao autohtone banjalučke 	vještine, zaštitu vodotoka, obala i porječja rijeka, kao i postavljanje zvaničnih standarda vožnje dajak čamca sa ciljem registrovanja ove vještine kao sporta.
 					</li>
 
 					<li>
-						<b><u>Dajak čamac kao simbol grada</u></b> - pretpostavka je da je nastao kada i Banjaluka, prvo zato što nije bilo mostova pa je čamac bio jedino rješenje za prelazak sa obale na obalu, a kasnije kada su sagrađeni prvi mostovi, bio je jedini način prelaska preko rijeke a da se ne plati mostarina. Korišten je u trgovačke svrhe, za prevoz robe od obale do obale.
+						<b>Dajak čamac kao simbol grada</b> - pretpostavka je da je nastao kada i Banjaluka, prvo zato što nije bilo mostova pa je čamac bio jedino rješenje za prelazak sa obale na obalu, a kasnije kada su sagrađeni prvi mostovi, bio je jedini način prelaska preko rijeke a da se ne plati mostarina. Korišten je u trgovačke svrhe.
 					</li>
 
 					<li>
@@ -66,6 +67,8 @@ const Home = () => {
 						koristi se zbog relativno male dubine gdje veslo ne bi bilo od pomoći.
 					</li>
 				</ul>
+				<img src={pic}></img>
+
 			</div>
 	)
 	
