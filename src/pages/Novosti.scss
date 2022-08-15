@@ -1,57 +1,81 @@
-@use '../sass/mixins';
-@use '../sass/variables';
+@use "../sass/mixins";
+@use "../sass/variables";
 
-.home{
-    h2{
-        text-align: center;
+.title {
+  h2 {
+    text-align: center;
+  }
+}
+
+.novosti {
+  @media screen and (min-width: variables.$mobile-lg) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media screen and (min-width: variables.$tablet-lg) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .excerpt-post {
+    width: 90%;
+  }
+  .loader {
+    top: 260px;
+    left: 53%;
+    @media screen and (max-width: variables.$mobile-lg) {
+      top: 230px;
+    }
+  }
+}
+
+.home {
+  .container {
+    margin-top: 20px;
+    h1 {
+      width: 100%;
+      text-align: center;
+    }
+    @include mixins.flex(column, flex-start, stretch);
+    @media screen and (min-width: variables.$mobile-lg) {
+      @include mixins.flex(row, space-evenly, stretch);
+      flex-wrap: wrap;
+      column-gap: 20px;
+      row-gap: 20px;
     }
 
-    .container {
-		h1{
-			width: 100%;
-			text-align: center;
-		}
-		@include mixins.flex(column, flex-start, stretch);
-		@media screen and (min-width: variables.$mobile-lg) {
-			@include mixins.flex(row, space-evenly, stretch);
-			flex-wrap: wrap;
-			column-gap: 20px;
-			row-gap: 20px;
-		}
+    .excerpt-post {
+      .btn-group {
+        .btn {
+          background-color: variables.$color-light-blue;
+          padding: 5px 15px;
+          border-radius: 10px;
+          color: black;
+        }
+      }
+    }
+  }
 
-		.excerpt-post{
-			.btn-group{
-				
-				.btn{
-					background-color: variables.$color-light-blue;
-   					padding: 5px 15px;
-   					border-radius: 10px;
-					color: black;
-				}
-			}
-		}
-	}
-
-	.pagination {
-		margin-top: 45px;
-		.pagination-container {
-			display: flex;
-			justify-content: center;
-			column-gap: 30px;
-			button {
-				font-size: 25px;
-				border: none;
-				background-color: transparent;
-				cursor: pointer;
-				@media screen and (max-width: variables.$mobile-md) {
-					font-size: 16px;
-				}
-				img {
-					@media screen and (max-width: variables.$mobile-md) {
-						height: 12px;
-					}
-				}
-			}
-		}
-	}
+  .pagination {
+    margin-top: 45px;
+    .pagination-container {
+      display: flex;
+      justify-content: center;
+      column-gap: 30px;
+      button {
+        font-size: 25px;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        @media screen and (max-width: variables.$mobile-md) {
+          font-size: 16px;
+        }
+        img {
+          @media screen and (max-width: variables.$mobile-md) {
+            height: 12px;
+          }
+        }
+      }
+    }
+  }
 }

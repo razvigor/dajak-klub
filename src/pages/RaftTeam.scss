@@ -1,53 +1,112 @@
-@use '../sass/mixins';
-@use '../sass/variables';
-.raft-team {
-	padding: 45px 0;
-	.container {
-		h1{
-			width: 100%;
-			text-align: center;
-		}
-		@include mixins.flex(column, flex-start, stretch);
-		@media screen and (min-width: variables.$mobile-lg) {
-			@include mixins.flex(row, space-between, stretch);
-			flex-wrap: wrap;
-			column-gap: 20px;
-			row-gap: 20px;
-		}
+@use "../sass/mixins";
+@use "../sass/variables";
+@import "../components/ExcerptPost.scss";
 
-		
-		.excerpt-post{
-			.btn-group{
-				
-				.btn{
-					background-color: variables.$color-light-blue;
-   					padding: 5px 15px;
-   					border-radius: 10px;
-					color: black;
-				}
-			}
-		}
-	}
-	.pagination {
-		margin-top: 45px;
-		.pagination-container {
-			display: flex;
-			justify-content: center;
-			column-gap: 30px;
-			button {
-				font-size: 25px;
-				border: none;
-				background-color: transparent;
-				cursor: pointer;
-				@media screen and (max-width: variables.$mobile-md) {
-					font-size: 16px;
-				}
-				img {
-					@media screen and (max-width: variables.$mobile-md) {
-						height: 12px;
-					}
-				}
-			}
-		}
-	}
+.raft-team {
+  padding: 45px 0;
+
+  .container {
+    h1 {
+      width: 100%;
+      text-align: center;
+    }
+    @include mixins.flex(column, flex-start, stretch);
+    @media screen and (min-width: variables.$mobile-lg) {
+      @include mixins.flex(row, space-between, stretch);
+      flex-wrap: wrap;
+      column-gap: 20px;
+      row-gap: 20px;
+    }
+
+    .excerpt-post {
+      .btn-group {
+        .btn {
+          background-color: variables.$color-light-blue;
+          padding: 5px 15px;
+          border-radius: 10px;
+          color: black;
+        }
+      }
+    }
+  }
+
+  .pagination {
+    margin-top: 45px;
+    .pagination-container {
+      display: flex;
+      justify-content: center;
+      column-gap: 30px;
+      button {
+        font-size: 25px;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        @media screen and (max-width: variables.$mobile-md) {
+          font-size: 16px;
+        }
+        img {
+          @media screen and (max-width: variables.$mobile-md) {
+            height: 12px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.container h1 {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.loading-content {
+  @media screen and (min-width: variables.$mobile-lg) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media screen and (min-width: variables.$tablet-lg) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .excerpt-post {
+    width: 90%;
+  }
+}
+
+.loader {
+  @media screen and (max-width: variables.$mobile-lg) {
+    top: 525px;
+    left: 58%;
+  }
+  position: absolute;
+  left: 52%;
+  top: 750px;
+  z-index: 1;
+  width: 80px;
+  height: 80px;
+  margin: -76px 0 0 -76px;
+  border: 8px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 8px solid #21396f;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
