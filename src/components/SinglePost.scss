@@ -1,27 +1,40 @@
-@use '../sass/mixins';
-@use '../sass/variables';
+@use "../sass/mixins";
+@use "../sass/variables";
 
 .single-post {
-    padding: 20px 0 ;
-    width: 100%;
+  padding: 20px 120px;
+  width: 100%;
+  text-align: justify;
+  @media screen and (max-width: variables.$desktop-sm) {
+    width: 97%;
+    margin: 0 auto;
+    padding: 20px 10px;
+  }
+
+  h2 {
+    font-size: 20px;
+    text-align: center;
     @media screen and (min-width: variables.$desktop-sm) {
-        width: 97%;
-        margin: 0 auto;
+      font-size: 35px;
     }
-    h2 {
-        font-size: 20px;
-        @media screen and (min-width: variables.$desktop-sm) {
-            font-size: 35px;
-        }
+  }
+  h6 {
+    font-size: 14px;
+    color: lighten(variables.$color-dark-blue, 30);
+    @media screen and (min-width: variables.$desktop-sm) {
+      font-size: 16px;
     }
-    h6 {
-        font-size: 14px;
-        color: lighten(variables.$color-dark-blue, 30);
-        @media screen and (min-width: variables.$desktop-sm) {
-            font-size: 16px;
-        }
-    }
-    p {
-        line-height: 1.5;
-    }
+  }
+
+  p {
+    line-height: 1.5;
+  }
+
+  figure {
+    text-align: center;
+  }
+
+  img {
+    border-radius: 20px;
+  }
 }

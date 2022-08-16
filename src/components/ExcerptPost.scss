@@ -8,6 +8,7 @@
   margin: 22px;
   border: 1px solid variables.$color-dark-blue;
   border-radius: 15px;
+  position: relative;
 
   h3 {
     text-align: center;
@@ -18,10 +19,34 @@
     border-radius: 15px;
   }
 
+  a {
+    color: variables.$color-dark-blue;
+    font-size: 18px;
+  }
+
+  p {
+    margin-bottom: 55px;
+  }
+
   @media screen and (min-width: variables.$mobile-lg) {
     width: calc(40% - 10px);
   }
   @media screen and (min-width: variables.$tableet-md) {
     width: calc(30.33% - 13.334px);
+  }
+
+  .btn-group {
+    width: 90px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: variables.$color-light-blue;
+    text-align: center;
+    line-height: 1.7;
+    position: absolute;
+    bottom: 15px;
+    right: 10px;
+    &:hover {
+      background-color: variables.$color-golden-yellow;
+    }
   }
 }
